@@ -10,14 +10,40 @@
     #rover{
   width: 100px;
     }
+    p{
+      text-align:left;
+      text-indent: 30px;
+    }
+    #text_img{
+      text-indent: 0px;
+    }
+    h2{
+      font-size: large;
+      text-align: left;
+    }
+    #primo_menu{
+      border: 5px solid black;
+      background-color: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+    }
+    #textos_button, #Esfera_button{
+      background-color: white;
+      height: fit-content;
+      width: 100%;
+    }
   </style>
 </head>
 
 <body>
   
-  <div id="butoes_div">
-    <button id="butoes"> Textos </button>
-  </div>
+  <div id="primo_menu"> 
+    <button id="Textos_button">Textos</button>
+    <button id="Esfera_button">Esfera</button>
+  </div>  
 
   <div id="sphera de bloch" class="container text-center mt-4 d-none">
     <h1 class="mb-4">Visualizador</h1>
@@ -32,34 +58,116 @@
     </div>
   </div>
   <div id="textos" introdutorios class="container text-center mt-4">
-    <div id="indruducao">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim explicabo vel temporibus dicta totam quae neque dolore, cupiditate nostrum facere. Deleniti doloremque sunt nihil recusandae necessitatibus odit debitis repellendus! Distinctio?
+    <div id="introducao">
+      <h1>Introdução</h1>
+      <p>
+      A computação quântica é a junção da ciência da computação com a física quântica. 
+      Ambas as áreas com criação relativamente recente, a física quântica sendo teorizada pela primeira vez em no início do século XX, com os trabalhos de Max Planck.
+      E tendo sua teoria moderna criada em 1920, através dos trabalhos de Werner Heisenberg e Erwin Schrödinger, porém só tendo aplicações práticas em 1970. 
+      Enquanto a ciência da computação, foi criada em 1937, com os trabalhos Alen Turing durante a Segunda Guerra Mundial.
+      </p>
+      <p>
+      Já a computação quântica foi criada em 1980 por Paul Benioff, com um modelo de computador utilizando um sistema quântico microscópico.
+      E sendo popularizada através das teorias de Richard Feynman, em 1982, de usar computadores quânticos para simular melhor sistemas quânticos.
+      E da descoberta de maneiras do computador quântico ter vantagens sobre o clássico, por David Deutsch (1985), Peter Shor (1994) e Lov Grover (1995).
+      </p>
+      <p>
+      Assim para iniciarmos nosso aprendizado, nos próximos dois blocos serão explicados: o que é um bit, o que é o qubit e porquê eles foram idealizados.
+      </p>
     </div>
     <div id="BITS">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim explicabo vel temporibus dicta totam quae neque dolore, cupiditate nostrum facere. Deleniti doloremque sunt nihil recusandae necessitatibus odit debitis repellendus! Distinctio?
+      <h1>O que é um bit</h1>
+      <p>
+      O bit é a informação mais básica de um computador clássico. 
+      Ele pode ser representado por meio de uma sistema binário.
+      Por exemplo, o valor 0 ou o valor ou por uma corrente de energia passando ou não passando por um transistor; ou se uma luz está acessa ou apagada.
+      Através desse sistema binário é possível realizar qualquer coisa que seu computador, notebook ou celular faz atualmente.
+      </p>
+      <p id="text_img">
+      Nas imagens abaixo temos o exemplo de como funciona o bit representado por uma lâmpada:
+      </p>
+      <p>
+      Porem o bit tem uma problema que atrapalha seu funcionamento, mesmo com o melhoramento de seu funcionamento.
+      Que é o seguinte: De acordo com a lei de Moore a cada 2 anos o numero de processadores, lugar onde  os bits são armazenados e tratados, em um chip melhora o dobro, duplicando nível do processamento computacional. 
+      </p>
+      <p>
+      Mas como o tamanho do chip não muda é necessário diminuir o tamanho dos transistores pela metade. 
+      Fazendo com que chegasse um momento onde os processadores começassem a sofre efeitos quânticos. 
+      Isso fazia com que os bits dessem bugs nos computadores.
+      No próximo bloco iremos ver como esses problemas foram usados para melhorar a velocidade de resolução de algumas tarefas.
+      </p>
     </div>
     <div id="QUBITS">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sint maxime excepturi vero cumque error veritatis, saepe adipisci assumenda quia tempore laudantium nobis accusamus vitae blanditiis, sit sed molestias aut?
+      <h1>O que é um qubit</h1>
+    <p>
+      Então foi criado uma nova maneira de representar os bits que ajuda nas resoluções desses problemas e ainda pode melhorar a velocidade de como alguns problemas são resolvidos, essa forma é os bits quânticos, mais conhecidos como qubits. 
+      Eles aproveitam desses efeitos quânticos para conseguir realizar um melhor processamento.
+    </p>
+    <p>
+      Basicamente o que eles fazem é utilizar os efeitos quânticos, como sobreposição, que é os qubits estarem nos estados 1 e 0 num mesmo instante, interferência e embrenhamento de estados, através desse efeitos é possível criar novas portas logicas e com elas realizar algumas tarefas de maneiras mais rápidas que um computador clássico, como o algorítimo de Deutsch.
+    </p>
+    <p id="text_img">
+      Aqui temos uma forma de visualização dos quibit com uma analogia próxima a da analogias da lampada, utilizada para os bits no bloco anterior:
+    </p>
+    <p>
+      Uma maneira mais simples de visualizar como funciona os qubits é pensar que eles funcionam como um interruptor, ligado a uma lampada, em uma sala separada que você não consegue visualizar.
+      Então você pode fazer semelhante ao bit clássico e sempre que você aperta o interruptor totalmente para cima ou para baixo, a lampada sempre será visualizada conforme esperado para um ser clássico.
+    </p>
+    <p>
+      Porem ainda é possível deixar seu interruptor em uma posição, ou melhor posições, intermediarias.
+      Nelas, no momento, que for visualizar a lampada poderá visualiza-las em um estado ou outro com uma probabilidade.
+      Que depende de como o interruptor esta posicionado.
+      Por exemplo, com ele no meio tem uma chance de 50% da lampada estar ligada e 50% de estar desligada.
+      E conforme esperado, pelo exemplo anterior, se o interruptor estiver totalmente virado em uma direção ele terá 100% de chance de estar nesse estado.
+    </p>
+    <br>
+    <br>
+    <h2>
+      No próximo bloco será apresentado um forma mais geométrica e interativa de visualizar o qubit, conhecida como esfera de Bloch.
+    </h2>
     </div>
+  </div>
+  <div id="butoes_div">
+    <button id="butoes"> Proxima </button>
   </div>
 
   <script>
+  let Textos_button = document.getElementById("Textos_button");
+  let Esfera_button = document.getElementById("Esfera_button");
   let sphera = document.getElementById("sphera de bloch");
   let textos = document.getElementById("textos"); 
   let botoes= document.getElementById("butoes");
   let clock = 1;
+
+  Textos_button.addEventListener("click", ()=> {
+    sphera.classList.add('d-none');
+    textos.classList.remove('d-none');
+    botoes.innerHTML="Proximo";
+    if (clock%2===0){
+      clock+=1;
+    }
+  })
+
+  Esfera_button.addEventListener("click", ()=> {
+    sphera.classList.remove('d-none');
+    textos.classList.add('d-none');
+    botoes.innerHTML="Anterior";
+    if (clock%2===0){
+      clock+=1;
+    }
+  })
   
   botoes.addEventListener("click", () => {
     if (clock%2===1){
       sphera.classList.remove('d-none');
       textos.classList.add('d-none');
-      botoes.innerHTML="Esfera";
+      botoes.innerHTML="Anterior";
       clock+=1;
   }
   else{
     sphera.classList.add('d-none');
     textos.classList.remove('d-none');
-    botoes.innerHTML="Textos";
+    botoes.innerHTML="Proximo";
     clock+=1;
   }
   })
