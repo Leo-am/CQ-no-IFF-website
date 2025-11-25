@@ -45,18 +45,17 @@
     <button id="Esfera_button">Esfera</button>
   </div>  
 
-  <div id="sphera de bloch" class="container text-center mt-4 d-none">
+  <div id="sphera_de_bloch" class="container text-center mt-4 d-none">
     <h1 class="mb-4">Visualizador</h1>
-    <img id="bloch" src="https://informacaoquantica.wordpress.com/wp-content/uploads/2020/05/05_estadoi.png?w=480" alt="Esfera de Bloch">
-    <div class="my-4">
-      <label for="hover" class="form-label">
-        Selecione o angulo (Graus): <span id="Value" class="slider-value">45</span>
-      </label>
-      <div class="mx-auto" style="max-width: 400px;">
-        <input type="range" class="form-range" min="0" max="90" step="15" id="hover">
-      </div>
+    <img id="bloch" src="/bloch_image?theta=45">
+    <h3>
+      Selecione o angulo (Graus): <span id="Value" class="slider-value">45</span>
+    <h3>
+    <div class="mx-auto" style="max-width: 400px;">
+      <input type="range" class="form-range" min="0" max="180" step="30" id="hover">
     </div>
   </div>
+    
   <div id="textos" introdutorios class="container text-center mt-4">
     <div id="introducao">
       <h1>Introdução</h1>
@@ -130,11 +129,11 @@
   <div id="butoes_div">
     <button id="butoes"> Proxima </button>
   </div>
-
+  
   <script>
   let Textos_button = document.getElementById("Textos_button");
   let Esfera_button = document.getElementById("Esfera_button");
-  let sphera = document.getElementById("sphera de bloch");
+  let sphera = document.getElementById("sphera_de_bloch");
   let textos = document.getElementById("textos"); 
   let botoes= document.getElementById("butoes");
   let clock = 1;
@@ -172,31 +171,15 @@
   }
   })
 
+  const hover= document.getElementById("hover");
+  const img = document.getElementById("bloch");
+  const val = document.getElementById("Value");
 
-  const rangeInput = document.getElementById('hover');
-  const rangeOutput = document.getElementById('Value');
-  const blochImage = document.getElementById('bloch');
-
-  const imageMap = {
-      0:  'https://informacaoquantica.wordpress.com/wp-content/uploads/2020/05/01_estadozero.png',
-      15: 'https://example.com/02_estado15.png',
-      30: 'https://example.com/03_estado30.png',
-      45: 'https://informacaoquantica.wordpress.com/wp-content/uploads/2020/05/05_estadoi.png?w=480',
-      60: 'https://example.com/05_estado60.png',
-      75: 'https://example.com/06_estado75.png',
-      90: 'https://informacaoquantica.wordpress.com/wp-content/uploads/2020/05/02_estadoum.png'
-    };
-
-  rangeOutput.textContent = rangeInput.value;
-  blochImage.src = imageMap[rangeInput.value];
-
-  rangeInput.addEventListener('input', function() {
-    const angle = this.value;
-    rangeOutput.textContent = angle;
-    blochImage.src=imageMap[angle] || imageMap[0];
-  });
+  hover.addEventListener("input", () => {
+    val.textContent=hover.value;
+    img.src = "/bloch_image?theta=" + hover.value + "&_=" + Date.now();
+  })
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 </html>
